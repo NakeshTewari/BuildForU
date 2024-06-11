@@ -4,188 +4,208 @@ body {
 
 /* Navbar styles */
 .navbar {
-	background: black;
-	height: 80px;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0 20px;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
-	z-index: 1000;
+  background: black;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%; /* Ensure the width remains 100% */
+  z-index: 1000;
+  box-sizing: border-box; /* Ensure padding is included in width calculations */
 }
 
 .nav-title {
-	color: white;
-	font-size: 1.5rem;
+  color: white;
+  font-size: 1.5rem;
+  flex-shrink: 0;
 }
 
 .nav-items {
-	display: flex;
-	align-items: center;
+  display: flex;
+  align-items: center;
+  margin-left: auto; /* Ensure items are pushed to the right */
+  gap: 15px; /* Use gap for spacing instead of margin-left */
 }
 
 .nav-item {
-	margin-left: 20px;
-	color: white;
-	font-size: 1.2rem;
-	display: flex;
-	align-items: center;
+  color: white;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
 }
 
 .search-container {
-	display: flex;
-	align-items: center;
-	background: white;
-	color: black;
-	padding: 5px 10px;
-	border-radius: 60px;
-	width: 300px;
+  display: flex;
+  align-items: center;
+  background: white;
+  color: black;
+  padding: 5px 10px;
+  border-radius: 60px;
+  width: 300px; /* Reduced width to save space */
 }
 
 .search-icon {
-	color: black;
-	margin-right: 5px;
+  color: black;
+  margin-right: 5px;
 }
 
 .search-input {
-	border: none;
-	outline: none;
-	width: 100%;
-	font-size: 1rem;
-	background: none;
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 1rem;
+  background: none;
 }
 
 .notificationIcon {
-	height: 27px;
-	width: 30px;
-	transition: transform 0.2s;
+  height: 27px;
+  width: 30px;
+  transition: transform 0.2s;
+  color: white;
 }
 
 .notificationIcon:hover {
-	animation: shake 0.5s;
+  animation: shake 0.5s;
 }
 
 .profileIcon {
-	height: 27px;
-	width: 30px;
-	transition: transform 0.2s;
+  height: 27px;
+  width: 30px;
+  transition: transform 0.2s;
+  color: white;
 }
 
 .profileIcon:hover {
-	animation: pop 0.2s;
+  animation: pop 0.2s;
 }
 
 /* Shake animation */
 @keyframes shake {
-	0%, 100% { transform: translateX(0); }
-	25% { transform: translateX(-2px); }
-	50% { transform: translateX(2px); }
-	75% { transform: translateX(-2px); }
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-2px);
+  }
+  50% {
+    transform: translateX(2px);
+  }
+  75% {
+    transform: translateX(-2px);
+  }
 }
 
 /* Pop animation */
 @keyframes pop {
-	0% { transform: scale(1); }
-	50% { transform: scale(1.2); }
-	100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* Sidebar styles */
 .sidebar-nav {
-	background: black;
-	width: 250px;
-	height: 100vh;
-	display: flex;
-	justify-content: center;
-	position: fixed;
-	top: 80px; /* Below the navbar */
-	left: 0;
-	z-index: 10;
-	overflow-y: scroll; /* Enable vertical scrolling */
+  background: black;
+  width: 250px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  top: 80px; /* Below the navbar */
+  left: 0;
+  z-index: 10;
+  overflow-y: scroll; /* Enable vertical scrolling */
 }
 
 .sidebar-wrap {
-	width: 100%;
-	padding-top: 20px; /* Ensure content starts below the navbar */
+  width: 100%;
+  padding-top: 20px; /* Ensure content starts below the navbar */
 }
 
 /* Custom scrollbar styles */
 .sidebar-nav::-webkit-scrollbar {
-	width: 12px;
+  width: 12px;
 }
 
 .sidebar-nav::-webkit-scrollbar-track {
-	background: #1e1e1e;
+  background: #1e1e1e;
 }
 
 .sidebar-nav::-webkit-scrollbar-thumb {
-	background-color: #888;
-	border-radius: 10px;
-	border: 3px solid #1e1e1e;
+  background-color: #888;
+  border-radius: 10px;
+  border: 3px solid #1e1e1e;
 }
 
 .sidebar-nav::-webkit-scrollbar-thumb:hover {
-	background: #555;
+  background: #555;
 }
 
 /* SidebarLink styles */
 .sidebar-link {
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 10px;
-	list-style: none;
-	height: 33.5px;
-	text-decoration: none;
-	font-size: 15px;
-	font-weight: bold;
-	border-radius: 50px;
-	background: #bae1ff;
-	color: black;
-	padding: 10px;
-	border: 5px solid black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  list-style: none;
+  height: 33.5px;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 50px;
+  background: #bae1ff;
+  color: black;
+  padding: 10px;
+  border: 5px solid black;
 }
 
 .sidebar-link:hover {
-	border: 2px solid white;
-	cursor: pointer;
+  border: 2px solid white;
+  cursor: pointer;
 }
 
 .sidebar-label {
-	margin-left: 16px;
+  margin-left: 16px;
 }
 
 /* DropdownLink styles */
 .dropdown-link {
-	background: #252831;
-	height: 50px;
-	padding-left: 3rem;
-	display: flex;
-	align-items: center;
-	text-decoration: none;
-	color: white;
-	border-radius: 50px;
-	border: 5px solid black;
-	font-size: 15px;
+  background: #252831;
+  height: 50px;
+  padding-left: 3rem;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  border-radius: 50px;
+  border: 5px solid black;
+  font-size: 15px;
 }
 
 .dropdown-link:hover {
-	border: 2px solid white;
-	cursor: pointer;
+  border: 2px solid white;
+  cursor: pointer;
 }
 
 /* Main content styles */
 .container {
   width: 100%;
-	display: flex;
-	margin-top: 40px; /* To account for the fixed navbar */
+  display: flex;
+  margin-top: 20px; /* To account for the fixed navbar */
 }
 
 .main-content {
-	margin-left: 250px; /* Adjust to the width of the sidebar */
-	padding: 20px;
-	flex-grow: 1;
+  margin-left: 250px; /* Adjust to the width of the sidebar */
+  padding: 20px;
+  flex-grow: 1;
 }

@@ -12,14 +12,18 @@ const SideBar = () => {
         <div className="nav-items">
           <div className="nav-item search-container">
             <FaIcons.FaSearch className="search-icon" />
-            <input type="text" placeholder="Search..." className="search-input" />
+            <input
+              type="text"
+              placeholder="Search..."
+              className="search-input"
+            />
           </div>
           <div className="nav-item">
             <FaIcons.FaBell className="notificationIcon" />
           </div>
           <div className="nav-item">
-            <Link to="/profile">
-              <FaIcons.FaUserCircle  className="profileIcon"/>
+            <Link to="/dashboard/profile">
+              <FaIcons.FaUserCircle className="profileIcon" />
             </Link>
           </div>
         </div>
