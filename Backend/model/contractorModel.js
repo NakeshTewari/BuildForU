@@ -19,4 +19,4 @@ const contractorSchama = new mongoose.Schema({
   },
 });
 
-module.exports = mongoose.model("Constructor", contractorSchama);
+module.exports = mongoose.model("Contractor", contractorSchama);

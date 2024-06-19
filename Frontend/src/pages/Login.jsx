@@ -3,6 +3,7 @@ import styled from "styled-components";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+
 export default function SignUp() {
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
@@ -18,6 +19,9 @@ export default function SignUp() {
       email,
       password,
     });
+    if (data.status == 200) {
+      navigate("/projects");
+    }
     console.log(data);
   }
 

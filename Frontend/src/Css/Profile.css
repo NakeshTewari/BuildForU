@@ -1,0 +1,32 @@
+.list-group-item.active {
+  background: #06c167;
+}
+
+.top-status ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 0;
+  margin: 0;
+}
+
+.top-status ul li {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  border: 8px solid #ddd;
+  box-shadow: 1px 1px 10px 1px #ddd inset;
+  margin: 10px 5px;
+}
+
+.top-status ul li.active {
+  border-color: #06c167;
+  box-shadow: 1px 1px 20px 1px #ffc107 inset;
+}
