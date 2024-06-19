@@ -32,22 +32,7 @@ export const SidebarData = [
 	},
 	{
 		title: "Business",
-		// path: "/business",
-		iconClosed: <RiIcons.RiArrowDownSFill />,
-		iconOpened: <RiIcons.RiArrowUpSFill />,
-
-		subNav: [
-			{
-				title: "Current",
-				path: "/business/currentBusiness",
-				icon: <IoIcons.IoIosPaper />,
-			},
-			{
-				title: "Add More",
-				path: "/business/addBusiness",
-				icon: <IoIcons.IoIosPaper />,
-			},
-		],
+		path: "/business",
 	},
 	{
 		title: "Profile",

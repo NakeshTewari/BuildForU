@@ -2,6 +2,7 @@ body {
   font-family: Arial, sans-serif;
 }
 
+
 /* Navbar styles */
 .navbar {
   background: black;
@@ -13,9 +14,9 @@ body {
   position: fixed;
   top: 0;
   left: 0;
-  width: 100%; /* Ensure the width remains 100% */
+  width: 100%;  /* Ensure the width remains 100% */
   z-index: 1000;
-  box-sizing: border-box; /* Ensure padding is included in width calculations */
+  box-sizing: border-box;  /* Ensure padding is included in width calculations */
 }
 
 .nav-title {
@@ -27,8 +28,8 @@ body {
 .nav-items {
   display: flex;
   align-items: center;
-  margin-left: auto; /* Ensure items are pushed to the right */
-  gap: 15px; /* Use gap for spacing instead of margin-left */
+  margin-left: auto;  /* Ensure items are pushed to the right */
+  gap: 15px;  /* Use gap for spacing instead of margin-left */
 }
 
 .nav-item {
@@ -45,7 +46,7 @@ body {
   color: black;
   padding: 5px 10px;
   border-radius: 60px;
-  width: 300px; /* Reduced width to save space */
+  width: 300px;  /* Reduced width to save space */
 }
 
 .search-icon {
@@ -85,32 +86,17 @@ body {
 
 /* Shake animation */
 @keyframes shake {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  25% {
-    transform: translateX(-2px);
-  }
-  50% {
-    transform: translateX(2px);
-  }
-  75% {
-    transform: translateX(-2px);
-  }
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-2px); }
+  50% { transform: translateX(2px); }
+  75% { transform: translateX(-2px); }
 }
 
 /* Pop animation */
 @keyframes pop {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
-  }
+  0% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+  100% { transform: scale(1); }
 }
 
 /* Sidebar styles */
@@ -201,11 +187,74 @@ body {
 .container {
   width: 100%;
   display: flex;
-  margin-top: 20px; /* To account for the fixed navbar */
+  margin-top:20px; /* To account for the fixed navbar */
+  
 }
 
 .main-content {
   margin-left: 250px; /* Adjust to the width of the sidebar */
   padding: 20px;
   flex-grow: 1;
+}
+
+/* business page */
+.business-page {
+  padding: 20px;
+  background: linear-gradient(to bottom, 	#edeeff, #ffffff); /* Gradient from business page color to white */
+}
+
+.business-sections {
+  display: flex;
+  justify-content: space-between;
+}
+
+.current-business,
+.add-business {
+  width: 48%;
+}
+
+h2 {
+  margin-bottom: 20px;
+}
+
+.business-card {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color:  		#ffedff;
+}
+
+.business-card img {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  margin-right: 20px;
+}
+
+.business-info {
+  flex-grow: 1;
+}
+
+.business-info p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.business-info button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.business-info button:hover {
+  background-color: #0056b3;
 }
